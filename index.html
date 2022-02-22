@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김재옥 .attr() tab</title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        // .attr() - 선택한 요소에 새 속성을 생성하거나 변경
+       $(function(){
+            $(".btn1").on("click",function(){
+                $(".frame img").attr({"src":"./images/img1.gif","alt":"이름네온효과"}); // 새 속성 생성
+            });
+            $(".btn2").on("click",function(){
+                $(".frame img").attr({"src":"./images/img2.gif","alt":"사슴네온효과"}); 
+            });
+            $(".btn3").on("click",function(){
+                $(".frame img").attr({"src":"./images/img3.png","alt":"황금비율로고"}); 
+            });
+            $(".btn4").on("click",function(){
+                $(".frame img").attr({"src":"./images/img4.gif","alt":"슈야"}); 
+            });
+            $(".btn5").on("click",function(){
+                $(".frame img").attr({"src":"./images/img5.png","alt":"원"}); 
+            });
+            $(".btn6").on("click",function(){
+                $(".frame img").attr({"src":"./images/img6.png","alt":"연필"}); 
+            });
+       });
+    </script>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {background: #FF0075;}
+        ul,li {margin: 0; padding: 0; list-style: none;}
+        #design {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+        #design .menu ul {display: flex; justify-content: space-between;}
+        #design .menu ul li a {display: block; background: #000; font-size: 14px;
+        text-decoration: none; color: #fff; width: 110px; padding: 10px 0 10px 0; text-align: center; 
+        border-top-left-radius: 10px; border-top-right-radius: 10px;}
+        #design .menu ul li a:hover {background: #999;}
+        #design .menu ul li a:focus {background: #666;}
+    </style>
+</head>
+<body>
+    <!-- #design>.menu>ul>li*6>a.btn$ -->
+    <div id="design">
+        <div class="menu">
+            <ul>
+                <li><a href="#" class="btn1">이름네온효과</a></li>
+                <li><a href="#" class="btn2">사슴네온효과</a></li>
+                <li><a href="#" class="btn3">황금비율로고</a></li>
+                <li><a href="#" class="btn4">슈야</a></li>
+                <li><a href="#" class="btn5">원</a></li>
+                <li><a href="#" class="btn6">연필</a></li>
+            </ul>
+        </div>
+
+        <!-- .frame>a>img -->
+        <div class="frame"><a href="#"><img src="./images/img1.gif" alt="name animation"></a></div>
+
+    </div>
+</body>
+</html>
